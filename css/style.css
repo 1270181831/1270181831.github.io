@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Microsoft YaHei", "serif";
+    user-select: none;
+}
+
+html,
+body {
+    /* 页面多宽显示多宽，并不显示滚动条 */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #023b3b;
+    background: url(../image/bg.jpg) no-repeat center;
+    /* 父级添加3d场景 */
+    perspective: 800px;
+}
+
+#wrap ul#list {
+    width: 120px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -60px;
+    /* test */
+    transform-style: preserve-3d;
+    transform: translateZ(-3000px) rotateX(0deg) rotateY(0deg);
+}
+
+#wrap ul#list li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 160px;
+    background: rgba(0, 127, 127, 0.5);
+    border: 1px solid rgba(127, 255, 255, 0.5);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+    text-align: center;
+    transition: transform 2s cubic-bezier(.94, .02, .49, .98);
+    -webkit-transition: transform 2s cubic-bezier(.94, .02, .49, .98);
+    -moz-transition: transform 2s cubic-bezier(.94, .02, .49, .98);
+    -ms-transition: transform 2s cubic-bezier(.94, .02, .49, .98);
+    -o-transition: transform 2s cubic-bezier(.94, .02, .49, .98);
+}
+
+#wrap ul#list li p:nth-child(1) {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+#wrap ul#list li p:nth-child(2) {
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgba(127, 255, 255, .75);
+    font-size: 18px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+#wrap ul#list li p:nth-child(3) {
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgba(127, 255, 255, .75);
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+#btn-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#btn-box nav {
+    float: left;
+    height: 30px;
+    padding: 10px 15px;
+    border: 1px solid rgba(127, 255, 255, 1);
+    margin: 0 5px;
+    line-height: 30px;
+    color: rgba(127, 255, 255, 1);
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+}
+
+#btn-box nav:hover {
+    background-color: rgba(0, 127, 127, 0.8);
+}
